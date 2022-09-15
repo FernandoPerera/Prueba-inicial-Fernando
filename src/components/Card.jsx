@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import TaskList from './TaskList';
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -42,13 +41,9 @@ const Card = ( { datos, setDatos, list, setList }) => {
                 value={form.tarea} 
                 onChange={handleInputChange}        
          />
-
-         <button type='submit' className='add'>Add</button>
             </div>
+            <button type='submit' className='add'>Add</button>
         </form>
-        <div>
-            <TaskList />
-        </div>
     </div>
   )
 }

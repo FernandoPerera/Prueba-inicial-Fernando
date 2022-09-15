@@ -4,7 +4,6 @@ import Task from './Task';
 const TaskList = ( { list, handleDelete  } ) => {
   return (
     <div>
-        <h4>Tasklist</h4>
         <div className='list'>
             {
                 list.map(task => {
@@ -17,6 +16,8 @@ const TaskList = ( { list, handleDelete  } ) => {
                     )
                 })
             }
+
+            <button className='delete' onClick={() => handleDelete(id)}>Borrar</button>
         </div>
     </div>
   )

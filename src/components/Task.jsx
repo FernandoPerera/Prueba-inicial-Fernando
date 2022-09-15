@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types';
 
-const Task = ({ id, name, handleDelete }) => {
+const Task = ({ name}) => {
   return (
     <div>
         <div>
             <button type='submit'>seleccionar</button>
             <h3>{name}</h3>
         </div>
-
-        <button className='delete' onClick={() => handleDelete(id)}>Borrar</button>
     </div>
   )
 }

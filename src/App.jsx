@@ -23,17 +23,21 @@ const App = () => {
 
     const [datos, setDatos] = useState({
         tarea: '',
-        show: true
+        show: false
     })
 
     return (
         <div className='container'>
             <h4 className='header'>My TaskList App!!!</h4>
-            <div>
+            <div className='cardContainer'>
                 <Card datos={datos} setDatos={setDatos} list={list} setList={setList}/> 
 
+                <h4>TaskList</h4>
+
+                { datos.show === false ? '"No tasks"' : null}
+
                 { datos.show === true ? <TaskList list={list} setList={setList} 
-                  handleDelete={handleDelete}/> : null }
+                  handleDelete={handleDelete}/> : null}
             </div>
         </div>
     )
